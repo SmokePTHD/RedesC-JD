@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      function funcao1() {
+        document.getElementById("demo1").innerHTML = "Parágrafo mudado.";
+      }
+    </script>
+  </head>
+  <body>
+    <p id="demo1">Parágrafo.</p>
+    <button type="button" onclick="funcao1()">Clique</button>
+
+    <h2>JavaScript no body</h2>
+    <p id="demo2">Outro parágrafo.</p>
+    <button type="button" onclick="funcao2()">Clique</button>
+    <script>
+      function funcao2() {
+        document.getElementById("demo2").innerHTML = "Outro parágrafo mudado.";
+      }
+    </script>
+
+    <h2>JavaScript externo</h2>
+    <p id="demo3">Mais um parágrafo</p>
+    <button type="button" onclick="funcao3()">Clique</button>
+    <p>(funcao3 está no ficheiro meuScript.js)</p>
+    <script src="meuScript.js"></script>
+
+    <p id="demo4"></p>
+    <script>
+      document.getElementById("demo4").innerHTML = 5 + 6;
+    </script>
+
+    <script>
+      document.write(7 + 6);
+    </script>
+    <br /><br />
+    <button onclick="document.write(5 + 9)">document.write</button>
+    <br /><br />
+
+    <button onclick="window.alert(3 + 6)">window.alert</button>
+    <br /><br />
+
+    <button onclick="console.log(3 + 6)">console.log</button>
+    <br /><br />
+
+    <p id="demo5"></p>
+    <script>
+      var x, y, z;
+      x = 5;
+      y = 6;
+      z = x + y;
+      document.getElementById("demo5").innerHTML = z;
+      // Comentario de ima linha
+      /*
+    Comentario de varias linhas
+    */
+    </script>
+
+    <script>
+      var length = 16; //Number
+      var tlm = "96777623"; //String
+      var lastName = "Johnson"; //String
+      var x = { fistName: "Jonh", lastName: "Doe" }; //Object
+    </script>
+    <p id="demo6"></p>
+    <script>
+      var x = 16 + "Joaquim";
+      document.getElementById("demo6").innerHTML = x;
+    </script>
+    <p id="demo7"></p>
+    <script>
+      var x = 10 + 5 + "Bernardo";
+      document.getElementById("demo7").innerHTML = x;
+    </script>
+    <p id="demo8"></p>
+    <script>
+      var x = "Bernardo" + 10 + 5;
+      document.getElementById("demo8").innerHTML = x;
+    </script>
+    <p id="demo9"></p>
+    <script>
+      var x;
+      x = 3;
+      x = "Joana";
+      document.getElementById("demo9").innerHTML = x;
+    </script>
+    <p id="demo10"></p>
+    <script>
+      var aluno1 = "António Gonçalves";
+      var aluno2 = "Maria Carrapatoso";
+      document.getElementById("demo10").innerHTML = aluno1 + "<br />" + aluno2;
+    </script>
+    <p id="demo11"></p>
+    <script>
+      var frase1 = "It's fine";
+      var frase2 = "Chamam-lhe 'Zeca'";
+      var frase3 = 'Ele é "esperto"';
+      document.getElementById("demo11").innerHTML =
+        frase1 + "<br />" + frase2 + "<br />" + frase3;
+    </script>
+    <p id="demo12"></p>
+    <script>
+      var x1 = 34.0;
+      var x2 = 34;
+      var x3 = 3.14;
+      document.getElementById("demo12").innerHTML =
+        x1 + "<br />" + x2 + "<br />" + x3;
+    </script>
+    <p id="demo13"></p>
+    <script>
+      var y = 123e5;
+      var z = 123e-5;
+      document.getElementById("demo13").innerHTML = y + "<br />" + z;
+    </script>
+    <p id="demo14"></p>
+    <script>
+      var x = 5;
+      var y = 5;
+      var z = 6;
+      document.getElementById("demo14").innerHTML =
+        (x == y) + "<br />" + (x == z);
+    </script>
+    <p id="demo15"></p>
+    <script>
+      var alunos = ["Francisco", "Berta", "Josefa"];
+      document.getElementById("demo15").innerHTML = alunos[0];
+    </script>
+    <p id="demo16"></p>
+    <script>
+      var aluno = { nome: "Joaquim", apelido: "Barbosa", idade: 17 };
+      document.getElementById("demo16").innerHTML =
+        "O " +
+        aluno.nome +
+        " " +
+        aluno.apelido +
+        " tem " +
+        aluno.idade +
+        " anos de idade.";
+    </script>
+    <p id="demo17"></p>
+    <script>
+      var x = 5;
+      document.getElementById("demo17").innerHTML =
+        typeof x + "<br />" + typeof "Fernando";
+    </script>
+    <p id="demo18"></p>
+    <script>
+      var veiculo;
+      document.getElementById("demo18").innerHTML =
+        veiculo + "<br />" + typeof veiculo;
+    </script>
+    <p id="demo19"></p>
+    <script>
+      var veiculo = "Renault";
+      veiculo = undefined;
+      document.getElementById("demo19").innerHTML =
+        veiculo + "<br />" + typeof veiculo;
+    </script>
+    <p id="demo20"></p>
+    <script>
+      var veiculo = "";
+      document.getElementById("demo20").innerHTML =
+        "O valor é: " + veiculo + "<br />" + "O tipo é: " + typeof veiculo;
+    </script>
+    <p id="demo21"></p>
+    <script>
+      var pessoa = { nome: "João", apelido: "Sá" };
+      pessoa = null;
+      document.getElementById("demo21").innerHTML = typeof pessoa;
+    </script>
+    <p id="demo22"></p>
+    <script>
+      function funcao4(p1, p2) {
+        return p1 * p2;
+      }
+      document.getElementById("demo22").innerHTML = funcao4(4, 3);
+    </script>
+    <p id="demo23"></p>
+    <script>
+      var x = funcao5(6, 2);
+      document.getElementById("demo23").innerHTML = x;
+      function funcao5(a, b) {
+        return a / b;
+      }
+    </script>
+    <p id="demo24"></p>
+    <script>
+      function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+      document.getElementById("demo24").innerHTML = toCelsius(77);
+    </script>
+    <p id="demo25"></p>
+    <script>
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+      document.getElementById("demo25").innerHTML =
+        toCelsius + " " + toCelsius(4);
+    </script>
+    <p id="demo26"></p>
+    <script>
+      document.getElementById("demo26").innerHTML =
+        "A temperatura é de " + toCelsius(77) + " graus Celsius.";
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+    </script>
+    <p id="demo27"></p>
+    <script>
+      var pessoa = {
+        nome: "João",
+        apelido: "Carvalho",
+        nomeCompleto: function () {
+          return this.nome + " " + this.apelido;
+        },
+      };
+      document.getElementById("demo27").innerHTML = pessoa.nomeCompleto();
+    </script>
+    <p id="demo28"></p>
+    <script>
+      var pessoa = {
+        nome: "João",
+        apelido: "Carvalho",
+        nomeCompleto: function () {
+          return this.nome + " " + this.apelido;
+        },
+      };
+      document.getElementById("demo27").innerHTML = pessoa.nomeCompleto;
+    </script>
+    <p id="demo29"></p>
+    <script>
+      funcaoGlobal();
+
+      document.getElementById("demo29").innerHTML = "Consigo aceder a " + carro;
+
+      function funcaoGlobal() {
+        carro = "Volvo";
+      }
+    </script>
+    <p id="demo30"></p>
+    <script>
+      var carro = "Renault";
+      document.getElementById("demo30").innerHTML =
+        "Eu consigo aceder a " + window.carro;
+    </script>
+    <p id="demolet"></p>
+    <script>
+      let x = 10;
+      {
+        let x = 2;
+      }
+      document.getElementById("demolet").innerHTML = x;
+    </script>
+    <button onmouseout="document.getElementById ('demo31').innerHTML=Date()">
+      Qual a data e hora?
+    </button>
+    <p id="demo31"></p>
+    <button onmouseout="this.innerHTML = Date()">Qual a data e hora?</button>
+    <br /><br />
+    <button onclick="mostraData()">Qual a data e hora?</button>
+    <script>
+      function mostraData() {
+        document.getElementById("demo32").innerHTML = Date();
+      }
+    </script>
+    <p id="demo32"></p>
+
+    <p id="demo33"></p>
+    <script>
+      var texto = " A minha avo joga melhor que a tua!";
+      document.getElementById("demo33").innerHTML = texto.length;
+    </script>
+
+    <p id="demo34"></p>
+    <script>
+      var texto = "Descobrir onde esta, pela primeira vez , a palavra 'onde'.";
+      var pos = texto.indexOf("onde");
+      document.getElementById("demo34").innerHTML = pos;
+    </script>
+
+    <p id="demo35"></p>
+    <script>
+      var texto = "Descobrir onde esta, pela primeira vez , a palavra 'onde'.";
+      var pos = texto.lastIndexOf("onde");
+      document.getElementById("demo35").innerHTML = pos;
+    </script>
+
+    <p id="demo36"></p>
+    <script>
+      var texto = "Descobrir onde esta, a palavra 'onde'.";
+      var pos = texto.indexOf("onde", 15);
+      document.getElementById("demo36").innerHTML = pos;
+    </script>
+    <p id="demo37"></p>
+    <script>
+      var texto = "Onde está a palavra 'está'?";
+      var pos = texto.indexOf("onde", 15);
+      document.getElementById("demo6"), (innerHTML = pos);
+    </script>
+    <p id="demo38"></p>
+    <script>
+      var texto = "Cabeça, Tronco, Membros";
+      var extrai = texto.slice(8, 14);
+      var extraiR = texto.slice(-23, -17);
+      document.getElementById("demo38").innerHTML = extrai + "<br />" + extraiR;
+    </script>
+    <p id="demo39"></p>
+    <script>
+      var texto = "Cabeça, Tronco, Membros";
+      var extrai = texto.substring(0, 6);
+      document.getElementById("demo39").innerHTML = extrai;
+    </script>
+    <p id="demo40"></p>
+    <script>
+      var texto = "Um, Dois, Três";
+      var extrai = texto.substr(4, 4);
+      document.getElementById("demo40").innerHTML = extrai;
+    </script>
+    <button onclick="funcao6()">Substituir</button>
+    <p id="demo41">Substitui uma palavra</p>
+    <script>
+      function funcao6() {
+        var texto = document.getElementById("demo41").innerHTML;
+        var subst = texto.replace("Substitui", "Substituída");
+        document.getElementById("demo41").innerHTML = subst;
+      }
+    </script>
+    <button onclick="funcao7()">Maiúsculas</button>
+    <p id="demo42">Converter para maiúsculas</p>
+    <script>
+      function funcao7() {
+        var texto = document.getElementById("demo42").innerHTML;
+        document.getElementById("demo42").innerHTML = texto.toUpperCase();
+      }
+    </script>
+    <button onclick="funcao8()">Minúsculas</button>
+    <p id="demo43">CONVERTER PARA MINÚSCULAS</p>
+    <script>
+      function funcao8() {
+        var texto = document.getElementById("demo43").innerHTML;
+        document.getElementById("demo43").innerHTML = texto.toLowerCase();
+      }
+    </script>
+    <p id="demo44"></p>
+    <script>
+      var texto1 = "Olá";
+      var texto2 = "Mundo!";
+      var texto3 = texto1.concat(" ", texto2);
+      document.getElementById("demo44").innerHTML = texto3;
+    </script>
+    <p id="demo45"></p>
+    <script>
+      var texto = "Olá Mundo!";
+      document.getElementById("demo45").innerHTML = texto.charAt(2);
+    </script>
+    <p id="demo46"></p>
+    <script>
+      var texto = "Olá Mundo!";
+      document.getElementById("demo46").innerHTML = texto.charCodeAt(2);
+    </script>
+    <p id="demo47"></p>
+    <script>
+      var str = "a, b, c, d, e, f";
+      var arr = str.split(",");
+      document.getElementById("demo47").innerHTML = arr[3];
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<p>Este exemplo mostra o método <b>getElementById</b></p>
+<p>Olá Mundo 2!</p>
+<p id="demo1"></p>
+<script>
+  var x = document.getElementsByTagName("p");
+  document.getElementById("demo1").innerHTML =
+    "O quinto parágrado (index 1s) é: " + x[1].innerHTML;
+</script>
+
+<p>
+  Este exemplo encontra o elemento com id = "main" e depois encontra todos os
+  elementos "p" dentro de "main".
+</p>
+<div id="main">
+  <p>O DOM é muito útil.</p>
+</div>
+<p id="demo2"></p>
+
+<script>
+  var x = document.getElementById("main");
+  var y = x.getElementsByTagName("p");
+  document.getElementById("demo2").innerHTML =
+    "O primeiro parágrafo dentro de 'main' é: " + y[0].innerHTML;
+</script>
