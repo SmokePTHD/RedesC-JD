@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animação</title>
+
+    <style>
+      #container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        background: gray;
+      }
+      #animate {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body onload="checkCookies()">
+    <div id="container">
+      <p>A animação aparecerá aqui.</p>
+      <div id="animate"></div>
+    </div>
+    <p><button onclick="mover()">Clique</button></p>
+
+    <script>
+      function mover() {
+        var elem = document.getElementById("animate");
+        var pos = 0;
+        var id = setInterval(frame, 5);
+        var sizeContainer = document.getElementById("container").offsetWidth;
+        var sizeAnimate = elem.offsetWidth;
+
+        function frame() {
+          if (pos >= sizeContainer - sizeAnimate) {
+            clearInterval(id);
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+          }
+        }
+      }
+    </script>
+
+    <h1 onclick="mudaTexto(this)">Clique neste texto!</h1>
+    <script>
+      function mudaTexto(id) {
+        id.innerHTML = "Cliquei";
+      }
+    </script>
+
+    <button onclick="displayDate()">A quantas estamos?</button>
+    <p id="demo5"></p>
+    <script>
+      function displayDate() {
+        document.getElementById("demo5").innerHTML = new Date();
+      }
+    </script>
+
+    <p id="demo7"></p>
+    <script>
+      function checkCookies() {
+        var texto = "";
+        if (navigator.cookieEnabled) {
+          texto = "Cookies ativadas.";
+        } else {
+          texto = "Cookies desativadas.";
+        }
+        document.getElementById("demo7").innerHTML = texto;
+      }
+    </script>
+
+    <script>
+      function funcaoUpper() {
+        var x = document.getElementById("nome");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+    <p>
+      Escreva o seu nome:
+      <input type="text" id="nome" onchange="funcaoUpper()" />
+    </p>
+
+    <br /><br />
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 30px;
+      "
+    >
+      Mouse Out
+    </div>
+    <script>
+      function mOver(obj) {
+        obj.innerHTML = "Mouse Over";
+      }
+
+      function mOut(obj) {
+        obj.innerHTML = "Mouse Out";
+      }
+    </script>
+
+    <br /><br />
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="
+        background-color: #d94a38;
+        width: 90px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Clique
+    </div>
+    <script>
+      function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Liberte";
+      }
+
+      function mUp(obj) {
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Obrigado";
+      }
+    </script>
+
+    <br /><br />
+    <script>
+      function mudaImg() {
+        document.getElementById("img").src = "img1.jpg";
+      }
+
+      function mudaImg1() {
+        document.getElementById("img").src = "img2.jpg";
+      }
+    </script>
+    <img
+      id="img"
+      onmousedown="mudaImg()"
+      onmouseup="mudaImg1()"
+      src="img2.jpg"
+      alt="Imagem interativa"
+    />
+
+    <h1 onmouseover="style.color = 'red'" onmouseout="style.color = 'yellow'">
+      Passe o cursor pelo texto
+    </h1>
+
+    <script>
+      function mudaBkg(x) {
+        x.style.background = "yellow";
+      }
+    </script>
+    Clique no campo de texto: <input type="text" onfocus="mudaBkg(this)" />
+  </body>
+</html>

@@ -22,3 +22,24 @@
   document.getElementById("demo2").innerHTML =
     "O primeiro parágrafo dentro de 'main' é: " + y[0].innerHTML;
 </script>
+
+<p id="p3">Texto a ocultar</p>
+<input
+  type="button"
+  value="Ocultar"
+  onclick="document.getElementById('p3').style.visibility='hidden'"
+/>
+<input
+  type="button"
+  value="Mostrar"
+  onclick="document.getElementById('p3').style.visibility='visible'"
+/>
+
+<br /><br />
+<img src="img1.jpg" id="imagem2" />
+<input
+  type="button"
+  value="Mudar"
+  onmouseover="document.getElementById('imagem2').src = 'img2.jpg'"
+  onmouseout="document.getElementById('imagem2').src = 'img1.jpg'"
+/>
